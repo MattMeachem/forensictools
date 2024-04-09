@@ -103,18 +103,10 @@ Name: "packing"; Description: "Packing"; Types: full;
 #include "packing\xvolkolak.iss"
 
 [Components]
-Name: "passwordcracking"; Description: "Password cracking"; Types: full;
-#include "passwordcracking\hashsuite.iss"
-#include "passwordcracking\hashcat.iss"
-#include "passwordcracking\ophcrack.iss"
-
-[Components]
 Name: "sleuthkit"; Description: "The Sleuth Kit"; Types: full;
 #include "sleuthkit\sleuthkit.iss"
 
-[Components]
-Name: "onlinesearch"; Description: "Online search"; Types: full;
-#include "onlinesearch\onlinesearch.iss"
+
 
 [Components]
 Name: "utilities"; Description: "Utilities"; Types: full;
@@ -223,8 +215,6 @@ begin
       if WizardIsComponentSelected('binaryanalysis\capa') then EnvAddPath(ExpandConstant('{app}') + '\binaryanalysis\capa');
       if WizardIsComponentSelected('binaryanalysis\floss') then EnvAddPath(ExpandConstant('{app}') + '\binaryanalysis\floss');
       if WizardIsComponentSelected('packing\upx') then EnvAddPath(ExpandConstant('{app}') + '\packing\upx');
-      if WizardIsComponentSelected('passwordcracking\hashcat') then EnvAddPath(ExpandConstant('{app}') + '\passwordcracking\hashcat');
-      if WizardIsComponentSelected('passwordcracking\ophcrack') then EnvAddPath(ExpandConstant('{app}') + '\passwordcracking\ophcrack');
       if WizardIsComponentSelected('sleuthkit\sleuthkit') then EnvAddPath(ExpandConstant('{app}') + '\sleuthkit\sleuthkit\bin');
       if WizardIsComponentSelected('utilities\exiftool') then EnvAddPath(ExpandConstant('{app}') + '\utilities\exiftool');
       if WizardIsComponentSelected('utilities\yara') then EnvAddPath(ExpandConstant('{app}') + '\utilities\yara');
@@ -262,8 +252,6 @@ begin
       EnvRemovePath(ExpandConstant('{app}') + '\binaryanalysis\capa');
       EnvRemovePath(ExpandConstant('{app}') + '\binaryanalysis\floss');
       EnvRemovePath(ExpandConstant('{app}') + '\packing\upx');
-      EnvRemovePath(ExpandConstant('{app}') + '\passwordcracking\hashcat');
-      EnvRemovePath(ExpandConstant('{app}') + '\passwordcracking\ophcrack');
       EnvRemovePath(ExpandConstant('{app}') + '\sleuthkit\sleuthkit\bin');
       EnvRemovePath(ExpandConstant('{app}') + '\utilities\exiftool');
       EnvRemovePath(ExpandConstant('{app}') + '\utilities\yara');

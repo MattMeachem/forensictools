@@ -319,38 +319,6 @@ upx -d packed_file.exe
 
         <hr/>
 
-        <section id="passwordcracking">
-            <h1>Password cracking</h1>
-            <details>
-                <summary>Hash Suite Free</summary>
-                <div class="description">
-                    <p><a href="https://hashsuite.openwall.net" target="_blank">Hash Suite</a> is a Windows program to test security of password hashes.</p>
-                </div>
-            </details>
-
-            <details>
-                <summary>hashcat</summary>
-                <div class="description">
-                    <p>hashcat is the world's fastest and most advanced password recovery utility, supporting five unique modes of attack for over 300 highly-optimized hashing algorithms. hashcat currently supports CPUs, GPUs, and other hardware accelerators on Linux, Windows, and macOS, and has facilities to help enable distributed password cracking.</p>
-
-                    <p><strong>Examples:</strong></p>
-
-                    <pre><code>hashcat -m 0 -a 0 hash.txt wordlist.txt
-hashcat -m 1000 ntlmhash.txt -a 0 rockyou.txt
-                    </code></pre>
-                </div>
-            </details>
-
-            <details>
-                <summary>Ophcrack</summary>
-                <div class="description">
-                    <p><a href="https://ophcrack.sourceforge.io" target="_blank">Ophcrack</a> is a Windows Password cracker based on Rainbow Tables.</p>
-                </div>
-            </details>
-        </section>
-
-        <hr/>
-
         <section id="registryanalysis">
             <h1>Registry analysis</h1>
             <details>
